@@ -1,26 +1,17 @@
 const express = require('express')
+const { bookingController } = require('../controllers/bookingControllers')
 const router = express.Router()
 
 //get all booking
-router.get('/', (req, res) => {
-    res.send('All booking')
-  })
+router.get('/', bookingController)
 //get booking by Id
-router.get('/:bookingId', (req, res) => {
-    res.send('get booking by Id')
-  })
+router.get('/:bookingId', bookingController)
 //add booking
-router.post('/', (req, res) => {
-    res.send('add new booking')
-  })
+router.post('/', bookingController)
 //update booking
-router.patch('/:bookingId', (req, res) => {
-    res.send('update booking')
-  })
+router.patch('/:bookingId', bookingController)
 //delete booking
-router.delete('/:bookingId', (req, res) => {
-    res.send('delete booking')
-  })
+router.delete('/:bookingId', bookingController)
 
 
 
